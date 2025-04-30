@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Tests",
+        "type": "shell",
+        "command": "javac",
+        "args": [
+          "-cp",
+          "lib/*:src",
+          "src/test/Story3Tests.java"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$javac"]
+      }
+    ]
+  }
+  
