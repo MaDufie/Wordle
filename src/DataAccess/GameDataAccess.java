@@ -25,7 +25,8 @@ public class GameDataAccess {
                 false,
                 false,
                 0,
-                "Playing");
+                "Playing",
+                new ArrayList<>());
 
         games.put(gameId, newGame);
         return new GameDataObject(newGame);
@@ -42,6 +43,10 @@ public class GameDataAccess {
             allGames.add(new GameDataObject(game));
         }
         return allGames;
+    }
+
+    public static void UpdateGame(GameDataObject updatedGame) {
+        games.put(updatedGame.gameId, new GameDataObject(updatedGame));
     }
 
     public static List<GameDataObject> GetGamesByPlayerId(int playerId) {

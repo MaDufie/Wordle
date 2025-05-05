@@ -29,11 +29,11 @@ public class GameDomainModel {
         ArrayList<String> errors = new ArrayList<>();
 
         if (!PlayerDomainModel.ValidatePlayerId(playerId)) {
-            errors.add("The playerId does not exist.");
+            errors.add("playerId does not exist");
         }
 
         if (!GameTypeDomainModel.ValidateGameTypeId(gameTypeId)) {
-            errors.add("Unsupported gameTypeId.");
+            errors.add("Unsupported gameTypeId");
         }
 
         if (!errors.isEmpty()) {

@@ -6,6 +6,7 @@ public class GuessDataObject {
     public int ordinal;
     public String guessedWord;
     public String result;
+    public boolean isValid;
 
     public GuessDataObject(int guessId, int gameId, int ordinal, String guessedWord, String result) {
         this.guessId = guessId;
@@ -13,6 +14,7 @@ public class GuessDataObject {
         this.ordinal = ordinal;
         this.guessedWord = guessedWord;
         this.result = result;
+        this.isValid = true;
     }
 
     public GuessDataObject(GuessDataObject copy) {
@@ -21,5 +23,6 @@ public class GuessDataObject {
         this.ordinal = copy.ordinal;
         this.guessedWord = copy.guessedWord;
         this.result = copy.result;
+        this.isValid = copy.isValid;
     }
 }

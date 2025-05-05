@@ -34,7 +34,7 @@ public class Sprint1Story3MaryCreateGameTests {
 
         assertTrue(response.getSuccess() == false);
         assertTrue(response.getErrorMessages() != null);
-        assertTrue(response.getErrorMessages().contains("The playerId does not exist."));
+        assertTrue(response.getErrorMessages().contains("playerId does not exist"));
         assertTrue(response.getGameId() == -1);
 
     }
@@ -46,7 +46,7 @@ public class Sprint1Story3MaryCreateGameTests {
 
         assertTrue(response.getSuccess() == false);
         assertTrue(response.getErrorMessages() != null);
-        assertTrue(response.getErrorMessages().contains("Unsupported gameTypeId."));
+        assertTrue(response.getErrorMessages().contains("Unsupported gameTypeId"));
         assertTrue(response.getGameId() == -1);
     }
 

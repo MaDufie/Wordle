@@ -25,6 +25,16 @@ public class GuessDataAccess {
     }
 
     public static List<GuessDataObject> GetGuessesByGameId(int gameId) {
-        return guessesByGameId.getOrDefault(gameId, new ArrayList<>());
+        return guessesByGameId.getOrDefault(gameId, new ArrayList<GuessDataObject>());
+    }
+
+    public static void UpdateGuess(GuessDataObject updatedGuess) {
+        List<GuessDataObject> guesses = guessesByGameId.get(updatedGuess.gameId);
+        for (int i = 0; i < guesses.size(); i++) {
+            if (guesses.get(i).ordinal == updatedGuess.ordinal) {
+                guesses.set(i, updatedGuess);
+                break;
+            }
+        }
     }
 }
