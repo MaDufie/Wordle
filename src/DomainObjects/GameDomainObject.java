@@ -38,7 +38,6 @@ public class GameDomainObject {
         this.didPlayerWin = gameDataObject.didPlayerWin;
         this.numGuesses = gameDataObject.numGuesses;
         this.status = gameDataObject.status;
-        
 
     }
 
@@ -91,5 +90,17 @@ public class GameDomainObject {
 
     public int getWordLengthId() {
         return this.wordLengthId;
+    }
+
+    public boolean getDidPlayerWin() {
+        return this.didPlayerWin;
+    }
+
+    public boolean getIsGameComplete() {
+        return this.isGameComplete;
+    }
+
+    public int getNumGuesses() {
+        return this.numGuesses;
     }
 }
